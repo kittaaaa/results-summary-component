@@ -1,0 +1,248 @@
+:root {
+    --result-bg-start: hsl(252, 100%, 67%);
+    --result-bg-end: hsl(241, 81%, 54%);
+
+    --circle-start: hsla(256, 72%, 46%, 1);
+    --circle-end: hsla(241, 72%, 46%, 0);
+    --primary-lt-red:hsl(0, 100%, 67%);
+    --primary-og-yellow: hsl(39, 100%, 56%);
+    --primary-teal: hsl(166, 100%, 37%);
+    --primary-cb-blue: hsl(234, 85%, 45%);
+
+    --primary-op-red: hsl(0, 100%, 97%);
+    --primary-op-yell: hsl(39, 100%, 97%);
+    --primary-op-green: hsl(166, 100%, 97%);
+    --primary-op-visu: hsl(234, 85%, 97%);
+
+    --white: hsl(0, 0%, 100%);
+    --netural-pl-blue: hsl(221, 100%, 96%);
+    --neutral-l-lavender: hsl(241, 100%, 89%);
+    --neutral-g-blue: hsl(224, 30%, 27%);
+
+
+    /* flow-space */
+    --flow-space-1: 1rem;
+    --flow-space-mid: 1.5rem;
+    --flow-space-2: 2rem;
+}
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+    font-weight: bolder;
+}
+/* Resets */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a, a:active, a:focus {
+    text-decoration: none;
+}
+img, picture, svg {
+    display: block;
+    width: 100%;
+}
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: "Hanken Grotesk", sans-serif;
+    /* color: var(--white); */
+    background-color: var(--netural-pl-blue);
+    color:var(--neutral-l-lavender);
+    font-weight: 500;
+}
+main {
+    width: 100%;
+    max-width: 450px;
+
+    /* display: flex;
+    justify-content: center; 
+    align-items: center; */
+}
+.card__result {
+    
+    text-align: center;
+    background: linear-gradient(to bottom, var(--result-bg-start), var(--result-bg-end));
+}
+
+.card__result__wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    max-width: 90%;
+}
+.card__result__wraper > * + * {
+    margin-top: 1rem;
+}
+.result__response {
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+.circle {
+    background: linear-gradient(
+                to bottom, 
+                var(--circle-start), 
+                var(--circle-end));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result__scored {
+    font-size: 3em;
+}
+.result__power-word , .result__scored {
+    color: white;
+}
+.card__summary {
+    color: var(--neutral-g-blue);
+    display: flex;
+    flex-direction: column;
+
+}
+.card__summary > * + * {
+    margin-top: var(--flow-space-1);
+}
+.summary__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.summary__item__text {
+    display: flex;
+    /* width: 100%; */
+
+}
+.summary__item__score {
+    /* width: 100%; */
+}
+.reaction-item {
+    background-color: var(--primary-op-red);
+}
+.reaction-item .reaction {
+    color: var(--primary-lt-red);
+}
+.memory-item {
+    background-color: var(--primary-op-yell);
+    /* opacity: 10%; *
+    /* background-color: --; */
+}
+.memory-item .memory {
+    color: var(--primary-og-yellow);
+}
+.verbal-item {
+    background-color: var(--primary-op-green);
+    /* opacity: 10%; */
+    /* background-color: --; */
+}
+.verbal-item .verbal {
+    color: var(--primary-teal);
+}
+.visual-item {
+    background-color: var(--primary-op-visu);
+}
+.visual-item .visual {
+    color: var(--primary-cb-blue);
+}
+.card-type {
+    margin-left: 1rem;
+}
+button {
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 150px;
+    background-color: var(--neutral-g-blue);
+    padding: 1rem;
+}
+button:hover {
+    background: linear-gradient(to bottom, var(--result-bg-start), var(--result-bg-end));
+}
+.obtained {
+    font-weight: bolder;
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        background-color: white;
+        border-radius: 30px;
+    }
+    .card__result {
+        width: 100%;
+        border-radius: 30px;
+    }
+    .card__result__wraper{
+        height: 100%;
+        /* justify-content: space-evenly; */
+    }
+    .card__summary {
+        width: 100%;
+    }
+}
+
+
+
+
+/* utilities */
+
+.p-2{
+    padding: 2rem;
+}
+
+/* border */
+
+.border-btm-r-30 {
+    border-bottom-right-radius: 30px;
+}
+.border-btm-l-30 {
+    border-bottom-left-radius: 30px;
+}

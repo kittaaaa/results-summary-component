@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Results summary component</title>
+</head>
+<body>
+  <main class="card">
+    <!-- <div class="wraper"> -->
+      <section class="card__result border-btm-r-30 border-btm-l-30">
+        <!-- content goes here -->
+         <div class="card__result__wraper p-2">
+            <h3>Your Result</h3>
+            <div class="circle">
+              <h1 class="result__scored">76</h1>
+              <p class="resul__out-of">of 100</p>
+            </div>
+            <div class="result__content">
+              <h1 class="result__power-word">Great</h1>
+              <p class="result__response">You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="card__summary p-2">
+        <h2>Summary</h2>
+        <div class="summary__item reaction-item">
+          <div class="summary__item__text">
+            <img src="/assets/images/icon-reaction.svg" alt="icon-memory">
+            <p class="card-type reaction">Reaction</p>
+          </div>
+          <p class="summary__item__score"><span class="obtained">80</span> / 100</p>
+        </div>
+        <div class="summary__item memory-item">
+          <div class="summary__item__text">
+            <img src="/assets/images/icon-memory.svg" alt="">
+            <p class="card-type memory">Memory</p>
+          </div>
+          <p class="summary__item__score"><span class="obtained">92</span> / 100</p>
+        </div>
+        <div class="summary__item verbal-item">
+          <div class="summary__item__text">
+            <img src="/assets/images/icon-verbal.svg" alt="">
+            <p class="card-type verbal">Verbal</p>
+          </div>
+          <p class="summary__item__score"><span class="obtained">61</span> / 100</p>
+        </div>
+        <div class="summary__item visual-item">
+          <div class="summary__item__text">
+            <img src="/assets/images/icon-visual.svg" alt="">
+            <p class="card-type visual">Visual</p>
+          </div>
+          <p class="summary__item__score"><span class="obtained">61</span> / 100</p>
+        </div>
+
+        <button clas="btn">Continue</button>
+      </section>
+
+    <!-- </div> -->
+  </main>
+  <!-- 
+
+
+   -->
+
+</body>
+</html>
